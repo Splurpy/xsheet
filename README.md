@@ -1,4 +1,4 @@
-# XSheet
+# XSheet - Command-Line Spreadsheet
 Ruby-based graphical command-line spreadsheet application.
 
 ## Current Release: v0.9.1 Alpha
