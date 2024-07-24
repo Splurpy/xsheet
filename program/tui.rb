@@ -1,4 +1,5 @@
 require 'curses'
+require 'io/console'
 require './model.rb'
 
 class Sheet
@@ -185,7 +186,15 @@ class Sheet
 
       loop do
         # puts "refreshing in editor loop"
-        refresh
+        begin
+          refresh
+        rescue RuntimeError
+          t_rows, t_cols = IO.console.winsize
+          puts "[XSHEET] ENCOUNTERED EXCEPTION - PROGRAM ABORTING !"
+          puts "[XSHEET] TERMINAL SIZE IS [#{t_rows} x #{t_cols}]"
+          puts "[XSHEET] COULD NOT LOAD PROGRAM -- Ensure window is at least 33 rows x 154 columns !\n\n"
+          exit
+        end
         # puts "about to handle input"
         handle_input
         # puts "input handled"
@@ -223,9 +232,9 @@ class Sheet
       puts "#{address} -- #{cell.to_s}"
     end
     @grid_win.clear
-    @form_win.clear
-    @display_win.clear
-    @mappings_win.clear
+      @form_win.clear
+      @display_win.clear
+      @mappings_win.clear
 
     grid = "     XSHEET v0.9.1 - ALPHA DEV BUILD                   MODE: #{@mode.upcase}ING CELL [#{@curr.col}, #{@curr.row}]
     ┌───┬─────────┬─────────┬─────────┬─────────┬───────────────────┬─────────┬─────────┬─────────┬─────────┐
