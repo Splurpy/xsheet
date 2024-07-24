@@ -227,7 +227,7 @@ class Sheet
     @display_win.clear
     @mappings_win.clear
 
-    grid = "     XSHEET V0.9 - DEVELOPMENT                      MODE: #{@mode.upcase}ING CELL [#{@curr.col}, #{@curr.row}]
+    grid = "     XSHEET v0.9.1 - ALPHA DEV BUILD                   MODE: #{@mode.upcase}ING CELL [#{@curr.col}, #{@curr.row}]
     ┌───┬─────────┬─────────┬─────────┬─────────┬───────────────────┬─────────┬─────────┬─────────┬─────────┐
     | * |    0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |
     ├──═╬═════════╬═════════╬═════════╬═════════╬═════════╬═════════╬═════════╬═════════╬═════════╬═════════┤
