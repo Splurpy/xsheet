@@ -8,7 +8,7 @@ For details on the current release, see https://github.com/Splurpy/xsheet/releas
 
 # Current Features
 - Dynamic text-based interface
-- Integer & Float datatypes
+- Integer, Float, & Boolean datatypes
 - Spreadsheet Cell referencing and dereferencing
 - Statistical functions (min, max, mean, sum, etc.)
 - Arithmetic, Logical, & Bitwise operations
