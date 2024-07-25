@@ -12,6 +12,7 @@ For details on the current release, see https://github.com/Splurpy/xsheet/releas
 - Spreadsheet Cell referencing and dereferencing
 - Statistical functions (min, max, mean, sum, etc.)
 - Arithmetic, Logical, & Bitwise operations
+- Formula support
 - Error handling
 
 # Technologies/Methodologies Used
